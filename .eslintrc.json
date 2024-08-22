@@ -24,8 +24,8 @@
     "@typescript-eslint/camelcase": "off",
     "import/extensions": ["error", "ignorePackages"],
     "no-console": "error",
-    "@typescript-eslint/lines-between-class-members": "error",
-    "@typescript-eslint/no-throw-literal" : "error"
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/no-throw-literal": "off"
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
