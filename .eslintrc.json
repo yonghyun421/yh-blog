@@ -1,36 +1,38 @@
+// .eslintrc.json
 {
+  "root": true,
   "env": {
     "browser": true,
-    "es6": true,
-    "node": true
+    "node": true,
+    "es6": true
   },
-  "parser": "babel-eslint",
+  "plugins": ["import", "@typescript-eslint", "react", "prettier"],
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
     "airbnb",
-    "plugin:prettier/recommended"
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
   ],
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".ts", ".tsx"] }],
+    "@typescript-eslint/camelcase": "off",
+  	"import/extensions": ["error", "ignorePackages"],
+    "no-console": "error"
   },
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+    "project": "./tsconfig.json"
   },
-  "plugins": ["react", "react-hooks", "prettier"],
-  "rules": {
-    "react/react-in-jsx-scope": 0,
-    "react/prefer-stateless-function": 0,
-    "react/jsx-filename-extension": 0,
-    "react/jsx-one-expression-per-line": 0
-  },
-  "globals": {
-    "React": "writable"
-  }
+  "ignorePatterns": ["build", "dist", "public"],
 }
