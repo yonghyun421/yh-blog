@@ -1,11 +1,9 @@
 import React from 'react';
 
-const HomePage = () => {
+export default function HomePage() {
   return (
     <div>
-      <h1>Welcome to my Next.js app using the app directory!</h1>
+      <h1>Welcome to my Next.js app!</h1>
     </div>
   );
-};
-
-export default HomePage;
+}
